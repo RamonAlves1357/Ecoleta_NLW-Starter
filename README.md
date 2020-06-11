@@ -66,14 +66,14 @@ Você pode visualizar o layout do projeto no formato através [desse link](<http
 1. Faça um clone :
 
 ```sh
-  $ git clone https://github.com/RamonAlves/ecoleta.git
+  $ git clone https://github.com/RamonAlves/Ecoleta_NLW-Starter.git
 ```
 
 2. Executando a Aplicação:
 
 ```sh
   # Vá até o diretorio do clone
-  $ cd ecoleta
+  $ cd Ecoleta_NLW-Starter
 
   # Instale as dependências
   $ npm install
