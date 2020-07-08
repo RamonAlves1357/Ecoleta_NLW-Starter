@@ -8,7 +8,6 @@
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=7159c1&labelColor=000000">
 </p>
 
-
 <h3 align="center">
   <b>Recicle! ajude o meio ambiente!</b>
 </h3>
