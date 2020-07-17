@@ -1,0 +1,28 @@
+{
+    "name": "Ecoleta",
+    "version": "1.0.0",
+    "description": "Seu maketplace de coleta de resioduos",
+    "main": "src/server.js",
+    "scripts": {
+        "start": "node src/server.js",
+        "dev": "nodemon src/server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RamonAlves1357/Ecoleta_NLW-Starter.git"
+    },
+    "keywords": [],
+    "author": "Ramon Alves",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/RamonAlves1357/Ecoleta_NLW-Starter/issues"
+    },
+    "homepage": "https://github.com/RamonAlves1357/Ecoleta_NLW-Starter#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}
