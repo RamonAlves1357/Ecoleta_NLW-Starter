@@ -4,15 +4,27 @@ const server = express()
 // Config pasta publica
 server.use(express.static("public"))
 
+// Template engine
+const nunjucks = require("nunjucks")
+nunjucks.configure("src/views", {
+    express: server,
+    noCache: true
+})
+
 // Config de rotas
 //Pagina inicial
 server.get("/", (req, res) => {
-    res.sendFile(__dirname + "/views/index.html")
+    res.render("index.html")
 })
 
 // Pagina "Creat-point"
 server.get("/create-point", (req, res) => {
-    res.sendFile(__dirname + "/views/create-point.html")
+    res.render("create-point.html")
+})
+
+// Pagina "search-point"
+server.get("/search", (req, res) => {
+    res.render("search-results.html")
 })
 
 // Ligar o servidor 
