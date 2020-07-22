@@ -27,7 +27,17 @@ server.get("/create-point", (req, res) => {
 
 // Pagina "search-point"
 server.get("/search", (req, res) => {
-    res.render("search-results.html")
+    // Consultar dados da atbela
+    db.all(`SELECT * FROM places`, function(err, rows) {
+        if (err) {
+            return console.log(err)
+        }
+        // console.log(" Aki estão os registros: ")
+        // console.log(rows)
+
+        res.render("search-results.html", { places: rows })
+    })
+
 })
 
 // Ligar o servidor 
