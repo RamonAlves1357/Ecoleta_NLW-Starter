@@ -8,12 +8,13 @@
 
 {% block styles %}
     <link rel="stylesheet" href="styles/create-point.css">
+    <link rel="stylesheet" href="modal.css">
 {% endblock styles %}
 
 {% block content %}
     {% include "partials/page-header.html" %}
 
-    <form action="">
+    <form action="/savepoint" method="POST">
         <h1>Cadastro do ponto de coleta</h1>
         <fieldset>
             <legend>
@@ -68,32 +69,32 @@
             </legend>
 
             <div class="items-grid">
-                <li data-id="1">
+                <li data-id="Lãmpadas">
                     <img src="/assets/lampadas.svg" alt="Imagem de Lãmpadas">
                     <span>Lãmpadas</span>
                 </li>
 
-                <li data-id="2">
+                <li data-id="Pilhas & Baterias">
                     <img src="/assets/baterias.svg" alt="Imagem de Pilhas & Baterias">
                     <span>Pilhas & Baterias</span>
                 </li>
 
-                <li data-id="3">
+                <li data-id="Papeis & Papelão">
                     <img src="/assets/papeis-papelao.svg" alt="Imagem de Papeis & Papelão">
                     <span>Papeis & Papelão</span>
                 </li>
 
-                <li data-id="4">
+                <li data-id="Resíduos Eletrônicos">
                     <img src="/assets/eletronicos.svg" alt="Imagem de Resíduos Eletrônicos">
                     <span>Resíduos Eletrônicos</span>
                 </li>
 
-                <li data-id="5">
+                <li data-id="Resíduos Orgânicos">
                     <img src="/assets/organicos.svg" alt="Imagem de Resíduos Orgânicos">
                     <span>Resíduos Orgânicos</span>
                 </li>
 
-                <li data-id="6">
+                <li data-id="Óleo de Cozinha">
                     <img src="/assets/oleo.svg" alt="Imagem de Óleo de Cozinha">
                     <span>Óleo de Cozinha</span>
                 </li>
@@ -105,6 +106,12 @@
         <button type="submit">Cadastrar ponto de coleta</button>
     </form>
 {% endblock content %}
+   
+{% block modal %}
+    {% if saved %}
+        {% include "partials/point-created.html" %}
+    {% endif %}
+{% endblock modal %}
 
 {% block scripts %}
     <script src="/scripts/create-point.js"></script>
